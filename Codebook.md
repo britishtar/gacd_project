@@ -1,11 +1,11 @@
-#"Getting and Cleaning Data" course on Coursera
+##"Getting and Cleaning Data" course on Coursera
 student:  Derek J., July 2015
 ________________________________________________________________________________
 ##This is my codebook for the tidy data set created for the course project.  It describes:
 
-PART 1 THE VARIABLES
-PART 2 THE DATA
-PART 3 TRANSFORMATIONS AND WORK PERFORMED TO CLEAN UP THE DATA
+* PART 1 THE VARIABLES
+* PART 2 THE DATA
+* PART 3 TRANSFORMATIONS AND WORK PERFORMED TO CLEAN UP THE DATA
 
 My tidy data set is called "tidy_data.txt".  The file can be read into R using:
 
@@ -13,14 +13,13 @@ My tidy data set is called "tidy_data.txt".  The file can be read into R using:
     
 It conforms to the "tidy data principles" outlined in the course:
 
-*1. One variable per column
-*2. Each observation in its own row
+1. One variable per column
+2. Each observation in its own row
 ________________________________________________________________________________
+
 ##PART 1: THE VARIABLES
 
-The columns in the tidy data set each represent a variable.  Variables are
-described below (more information on the how the measurements were determined
-can be found in the source publication - see PART 2: THE DATA):
+The columns in the tidy data set each represent a variable.  Variables are described below (more information on how the measurements were determined can be found in the source publication - see PART 2: THE DATA):
 
 Subject - unitless; identifies the subject (there were 30 subjects, identified
 by an integer 1-30)
@@ -28,12 +27,12 @@ by an integer 1-30)
 Activity - unitless; identifies the activity that the subject was performing,
 identified by the following character strings:
 
-	LAYING - subject was laying down
-	SITTING - subject was sitting
-	STANDING - subject was standing
-	WALKING - subject was walking on a level surface
-	WALKING_UPSTAIRS - subject was walking up stairs
-	WALKING_DOWNSTAIRS - subject was walking down stairs
+* LAYING - subject was laying down
+* SITTING - subject was sitting
+* STANDING - subject was standing
+* WALKING - subject was walking on a level surface
+* WALKING_UPSTAIRS - subject was walking up stairs
+* WALKING_DOWNSTAIRS - subject was walking down stairs
 
 avg.tBodyAcc.mean.X:  unitless; average of the mean of the body linear
 acceleration  in the X direction (time domain)
@@ -283,23 +282,21 @@ Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
 
 The data can be accessed at the following URL:
 
-https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%
-20Dataset.zip
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-Further information on the "Human Activity Recognition Using Smartphones"
-project can be found at:  www.smartlab.ws
+Further information on the "Human Activity Recognition Using Smartphones" project can be found at:
+
+www.smartlab.ws
 ________________________________________________________________________________
 ##PART 3: MANIPULATIONS AND TRANSFORMATIONS
 
-To get the dataset into its "tidy" form, I performed the following manipulations
-on the data.  These steps are presented as a general outline, for more detail,
-please see my "run_analysis.R" script and embedded comments:
+To get the dataset into its "tidy" form, I performed the following manipulations on the data.  These steps are presented as a general outline, for more detail, please see my "run_analysis.R" script and embedded comments:
 
-*1. Downloaded the data file at the URL referenced above in PART 2: THE DATA
+1. Downloaded the data file at the URL referenced above in PART 2: THE DATA
 
-*2. Unzipped the data into the default directory structure given in the .zip file
+2. Unzipped the data into the default directory structure given in the .zip file
 
-*3. Read the applicable metadata files into R ("features.txt" and
+3. Read the applicable metadata files into R ("features.txt" and
 "activity_labels.txt")
 
 4. Read the test data into R ("subject_test.txt", "x_test.txt", "y_test.txt")
