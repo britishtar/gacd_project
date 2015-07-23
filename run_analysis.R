@@ -15,13 +15,13 @@
 
 # Download the file containing the data set:
 
-#download.file(url="https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip",
-#              destfile="the_data.zip",
-#              method="curl")
+download.file(url="https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip",
+              destfile="the_data.zip",
+              method="curl")
 
 # Unzip the downloaded file into the current directory:
 
-#unzip("the_data.zip")
+unzip("the_data.zip")
 
 # Change working directory to the directory containing the data:
 
@@ -135,7 +135,7 @@ names(tidy_data)[3:81] <- paste0("avg.", names(the_data)[3:81]) # applies
 
 # Remove unnecessary variables and data from the workspace:
 
-unnec <- c("activity_labels", "features", "i", "j", "subject_test", "names"
+unnec <- c("activity_labels", "features", "i", "j", "subject_test",
            "subject_train", "subj_data", "chunk", "new_col", "num_vars",
            "test_data", "test_windows", "train_data", "train_windows", "x_test",
            "x_train", "y_test", "y_train", "indices", "all_data", "unnec")
